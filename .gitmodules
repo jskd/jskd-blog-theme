@@ -1,0 +1,3 @@
+[submodule "assets/js/plax"]
+	path = assets/js/plax
+	url = git@github.com:cameronmcefee/plax.git
