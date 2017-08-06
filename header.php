@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .bgimg {
-    background: url(<?php echo get_theme_file_uri() ?>/assets/images/coffeehouse.jpg) no-repeat center center fixed;
+    background: url(<?php echo get_theme_file_uri() ?>/assets/images/banniere--max.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,6 +26,43 @@ min-height: 380px;
   padding: 0;
 }
 
+.text-shadow-black {
+  text-shadow:
+    -5px 0    10px rgba(0,0,0,0.7),
+    0    5px  10px rgba(0,0,0,0.7),
+    5px  0    10px rgba(0,0,0,0.7),
+    0    -5px 10px rgba(0,0,0,0.7);
+}
+
+.cubesat-slot-1 {
+  border-style: none;
+  position: absolute;
+  height: 200px;
+  top: 25%;
+  left: 50%;
+}
+
+.cubesat-slot-1 {
+  border-style: none;
+  position: absolute;
+  height: 200px;
+  top: 0%;
+  left: 13%;
+}
+.cubesat-slot-2 {
+  border-style: none;
+  position: absolute;
+  height: 200px;
+  top: 48%;
+  left: 42%;
+}
+.cubesat-slot-3 {
+  border-style: none;
+  position: absolute;
+  height: 200px;
+  top: 27%;
+  left: 84%;
+}
 </style>
       <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head();?>
@@ -72,7 +109,10 @@ min-height: 380px;
 
 </nav>
 
-<header class="container-fluid bgimg padding-0">
+<header class="container-fluid bgimg padding-0 text-shadow-black">
+  <img class="cubesat-slot-1" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat-1" />
+  <img class="cubesat-slot-2" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat-1" />
+  <img class="cubesat-slot-3" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat-1" />
   <div class="container" style="height: 380px">
     <div class="w3-display-container w3-grayscale-min" style="height: 100%">
       <div class="w3-display-middle w3-text-white" style="width: 100%;">
