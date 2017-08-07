@@ -38,63 +38,43 @@ $(document).ready(function () {
       row_classes.shift()
     else
       row_classes.splice(row, 1)
-  });
+  })
 
 
-  $('.cubesat-col-0').data('xrange',60);
-  $('.cubesat-col-1').data('xrange',50);
-  $('.cubesat-col-2').data('xrange',40);
-  $('.cubesat-col-3').data('xrange',30);
-  $('.cubesat-col-4').data('xrange',20);
-  $('.cubesat-col-5').data('xrange',10);
-  $('.cubesat-col-6').data('xrange',0);
-  $('.cubesat-col-7').data('xrange',10);
-  $('.cubesat-col-8').data('xrange',20);
-  $('.cubesat-col-9').data('xrange',30);
-  $('.cubesat-col-10').data('xrange',40);
-  $('.cubesat-col-11').data('xrange',50);
+  $('.cubesat-col-0').data('xrange',200)
+  $('.cubesat-col-1').data('xrange',160)
+  $('.cubesat-col-2').data('xrange',120)
+  $('.cubesat-col-3').data('xrange',80)
+  $('.cubesat-col-4').data('xrange',40)
+  $('.cubesat-col-5').data('xrange',20)
+  $('.cubesat-col-6').data('xrange',20)
+  $('.cubesat-col-7').data('xrange',40)
+  $('.cubesat-col-8').data('xrange',80)
+  $('.cubesat-col-9').data('xrange',120)
+  $('.cubesat-col-10').data('xrange',160)
+  $('.cubesat-col-11').data('xrange',200)
+ 
+  $('.cubesat-row-0').data('yrange',200)
+  $('.cubesat-row-1').data('yrange',180)
+  $('.cubesat-row-2').data('yrange',160)
+  $('.cubesat-row-3').data('yrange',140)
+  $('.cubesat-row-4').data('yrange',120)
+  $('.cubesat-row-5').data('yrange',100)
+  $('.cubesat-row-6').data('yrange',80)
+  $('.cubesat-row-7').data('yrange',60)
+  $('.cubesat-row-8').data('yrange',40)
+  $('.cubesat-row-9').data('yrange',10)
 
+  $('.cubesat').plaxify()
 
-  $('.cubesat-col-7').data('invert', "true");
-  $('.cubesat-col-8').data('invert', "true");
-  $('.cubesat-col-9').data('invert', "true");
-  $('.cubesat-col-10').data('invert', "true");
-  $('.cubesat-col-11').data('invert', "true");
+  $('#earth').data('xrange',100)
+  $('#earth').data('yrange',100)
+  $('#earth').plaxify()
 
+  $.plax.enable()
 
-
-
-    
-  $('.cubesat-row-0').data('yrange',100);
-  $('.cubesat-row-1').data('yrange',90);
-  $('.cubesat-row-2').data('yrange',80);
-  $('.cubesat-row-3').data('yrange',70);
-  $('.cubesat-row-4').data('yrange',60);
-  $('.cubesat-row-5').data('yrange',50);
-  $('.cubesat-row-6').data('yrange',40);
-  $('.cubesat-row-7').data('yrange',30);
-  $('.cubesat-row-8').data('yrange',20);
-  $('.cubesat-row-9').data('yrange',10);
-
-    $('.cubesat').plaxify()
-
-$.plax.enable()
-
-
-
-
-
-
-    $.plax.enable();
-  });
+  })
 </script>
-
-
-
-
-
-
-
 
     <?php wp_footer(); ?> 
   </body>
