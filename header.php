@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" >
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,14 +12,20 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .bgimg {
-    background: url(<?php echo get_theme_file_uri() ?>/assets/images/banniere--max.png) no-repeat center center;
+    background: url("<?php echo get_theme_file_uri() ?>/assets/images/header/header.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 max-width: 100%; height: auto;
-min-height: 380px;
+height: 480px;
 }
+
+.header-container {
+  height: 480px;
+}
+
+
 .padding-0 {
   padding: 0;
 }
@@ -34,35 +38,116 @@ min-height: 380px;
     0    -5px 10px rgba(0,0,0,0.7);
 }
 
-.cubesat-slot-1 {
-  border-style: none;
+
+
+.cubesat {
   position: absolute;
-  height: 200px;
-  top: 25%;
-  left: 50%;
+  display: none;
 }
 
-.cubesat-slot-1 {
-  border-style: none;
-  position: absolute;
-  height: 200px;
-  top: 0%;
-  left: 13%;
+.cubesat-col-0 {
+  left: 0px;
 }
-.cubesat-slot-2 {
-  border-style: none;
-  position: absolute;
-  height: 200px;
-  top: 48%;
-  left: 42%;
+.cubesat-col-1 {
+  left: 180px;
 }
-.cubesat-slot-3 {
-  border-style: none;
-  position: absolute;
-  height: 200px;
-  top: 27%;
-  left: 84%;
+.cubesat-col-2 {
+  left: 360px;
 }
+.cubesat-col-3 {
+  left: 540px;
+}
+.cubesat-col-4 {
+  left: 720px;
+}
+
+.cubesat-col-5 {
+  left: 900px;
+}
+
+.cubesat-col-6 {
+  left: 1080px;
+}
+
+.cubesat-col-7 {
+  left: 1260px;
+}
+
+.cubesat-col-8 {
+  left: 1440px;
+}
+
+.cubesat-col-9 {
+  left: 1620px;
+}
+
+
+.cubesat-col-10 {
+  left: 1800px;
+}
+
+
+.cubesat-col-11 {
+  left: 1980px;
+}
+
+
+.cubesat-row-0 {
+  top: 40px;
+  max-height: 30px;
+  max-width: 30px;
+}
+.cubesat-row-1 {
+  top: 76px;
+  max-height: 40px;
+  max-width: 40px;
+}
+.cubesat-row-2 {
+  top: 112px;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.cubesat-row-3 {
+  top: 148px;
+  max-height: 50px;
+  max-width: 50px;
+}
+.cubesat-row-4 {
+  top: 184px;
+  max-height: 60px;
+  max-width: 60px;
+}
+.cubesat-row-5 {
+  top: 220px;
+  max-height: 70px;
+  max-width: 70px;
+}
+
+.cubesat-row-6 {
+  top: 256px;
+  max-height: 80px;
+  max-width: 80px;
+}
+
+.cubesat-row-7 {
+  top: 292px;
+  max-height: 90px;
+  max-width: 90px;
+}
+
+.cubesat-row-8 {
+  top: 328px;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.cubesat-row-9 {
+  top: 364px;
+  max-height: 110px;
+  max-width: 110px;
+}
+
 </style>
       <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head();?>
@@ -110,10 +195,20 @@ min-height: 380px;
 </nav>
 
 <header class="container-fluid bgimg padding-0 text-shadow-black">
-  <img class="cubesat-slot-1" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat-1" />
-  <img class="cubesat-slot-2" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat-1" />
-  <img class="cubesat-slot-3" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat-1" />
-  <div class="container" style="height: 380px">
+
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-0.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-1.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-2.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-3.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-4.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-5.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-6.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-7.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-8.png" data-xrange="0" data-yrange="0">
+  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-9.png" data-xrange="0" data-yrange="0">
+
+  <div class="container header-container">
+
     <div class="w3-display-container w3-grayscale-min" style="height: 100%">
       <div class="w3-display-middle w3-text-white" style="width: 100%;">
         <span class="w3-xxlarge">Jérôme Skoda</span><br />
