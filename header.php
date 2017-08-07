@@ -31,6 +31,24 @@ height: 480px;
   padding: 0;
 }
 
+footer, header {
+  padding: 0;
+  background: #333
+}
+
+main {
+
+  padding: 0;
+  background: #FFF
+
+
+}
+
+body {
+  background: #333;
+}
+
+
 .text-shadow-black {
   overflow: hidden;
   text-shadow:
@@ -47,50 +65,49 @@ height: 480px;
   display: none;
 }
 
+
 .cubesat-col-0 {
   left: 0px;
 }
+
 .cubesat-col-1 {
-  left: 180px;
+  left: 160px;
 }
 .cubesat-col-2 {
-  left: 360px;
+  left: 320px;
 }
 .cubesat-col-3 {
-  left: 540px;
+  left: 480px;
 }
 .cubesat-col-4 {
-  left: 720px;
+  left: 640px;
 }
-
 .cubesat-col-5 {
-  left: 900px;
+  left: 800px;
 }
 
 .cubesat-col-6 {
-  left: 1080px;
+  left: 960px;
 }
 
 .cubesat-col-7 {
-  left: 1260px;
+  left: 1120px;
 }
 
 .cubesat-col-8 {
-  left: 1440px;
+  left: 1280px;
 }
 
 .cubesat-col-9 {
-  left: 1620px;
+  left: 1440px;
 }
-
 
 .cubesat-col-10 {
-  left: 1800px;
+  left: 1600px;
 }
 
-
 .cubesat-col-11 {
-  left: 1980px;
+  left: 1760px;
 }
 
 
@@ -151,9 +168,21 @@ height: 480px;
 }
 #earth {
   position: absolute;
-  top: -80px;
-  left: -80px; z-index:0;
+  top: -100px;
+  left: -150px;
 }
+
+#plax-zone {
+  width: 1920px;
+  height: 480px;
+  overflow: hidden;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0px;
+}
+
 </style>
       <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head();?>
@@ -200,22 +229,21 @@ height: 480px;
 
 </nav>
 
-<header class="container-fluid padding-0 text-shadow-black hide-overflow">
-
-  <img id="earth" src="<?php echo get_theme_file_uri() ?>/assets/images/header/header.png" alt="earth web banner">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-0.png" alt="cubesat 0">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-1.png" alt="cubesat 1">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-2.png" alt="cubesat 2">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-3.png" alt="cubesat 3">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-4.png" alt="cubesat 4">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-5.png" alt="cubesat 5">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-6.png" alt="cubesat 6">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-7.png" alt="cubesat 7">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-8.png" alt="cubesat 8">
-  <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-9.png" alt="cubesat 9">
-
+<header class="container-fluid text-shadow-black hide-overflow">
+  <div id="plax-zone">
+    <img id="earth" src="<?php echo get_theme_file_uri() ?>/assets/images/header/header.jpg" alt="earth web banner">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-0.png" alt="cubesat 0">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-1.png" alt="cubesat 1">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-2.png" alt="cubesat 2">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-3.png" alt="cubesat 3">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-4.png" alt="cubesat 4">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-5.png" alt="cubesat 5">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-6.png" alt="cubesat 6">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-7.png" alt="cubesat 7">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-8.png" alt="cubesat 8">
+    <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-9.png" alt="cubesat 9">
+  </div>
   <div class="container header-container">
-
     <div class="w3-display-container w3-grayscale-min" style="height: 100%">
       <div class="w3-display-middle w3-text-white" style="width: 100%;">
         <span class="w3-xxlarge">Jérôme Skoda</span><br>
@@ -231,4 +259,5 @@ height: 480px;
   </div>
 </header>
 
-<div class="container">
+<main class="container-fluid hide-overflow">
+  <div class="container content">
