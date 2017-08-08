@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Blog Template for Bootstrap</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" >
+<head>
+  <title>Blog Template for Bootstrap</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+  <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/cubesat-plax.css">
+  <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/bootstrap-4.0.0-alpha6-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/w3.css">
+  <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+
 <style>
-.bgimg {
-    background: url("<?php echo get_theme_file_uri() ?>/assets/images/header/header.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-max-width: 100%; height: auto;
-height: 480px;
-}
-
 .header-container {
   height: 480px;
   overflow: hidden;
@@ -58,133 +50,8 @@ body {
     0    -5px 10px rgba(0,0,0,0.7);
 }
 
-
-
-.cubesat {
-  position: absolute;
-  display: none;
-}
-
-
-.cubesat-col-0 {
-  left: 0px;
-}
-
-.cubesat-col-1 {
-  left: 160px;
-}
-.cubesat-col-2 {
-  left: 320px;
-}
-.cubesat-col-3 {
-  left: 480px;
-}
-.cubesat-col-4 {
-  left: 640px;
-}
-.cubesat-col-5 {
-  left: 800px;
-}
-
-.cubesat-col-6 {
-  left: 960px;
-}
-
-.cubesat-col-7 {
-  left: 1120px;
-}
-
-.cubesat-col-8 {
-  left: 1280px;
-}
-
-.cubesat-col-9 {
-  left: 1440px;
-}
-
-.cubesat-col-10 {
-  left: 1600px;
-}
-
-.cubesat-col-11 {
-  left: 1760px;
-}
-
-
-.cubesat-row-0 {
-  top: 40px;
-  max-height: 30px;
-  max-width: 30px;
-}
-.cubesat-row-1 {
-  top: 76px;
-  max-height: 40px;
-  max-width: 40px;
-}
-.cubesat-row-2 {
-  top: 112px;
-  max-height: 50px;
-  max-width: 50px;
-}
-
-.cubesat-row-3 {
-  top: 148px;
-  max-height: 50px;
-  max-width: 50px;
-}
-.cubesat-row-4 {
-  top: 184px;
-  max-height: 60px;
-  max-width: 60px;
-}
-.cubesat-row-5 {
-  top: 220px;
-  max-height: 70px;
-  max-width: 70px;
-}
-
-.cubesat-row-6 {
-  top: 256px;
-  max-height: 80px;
-  max-width: 80px;
-}
-
-.cubesat-row-7 {
-  top: 292px;
-  max-height: 90px;
-  max-width: 90px;
-}
-
-.cubesat-row-8 {
-  top: 328px;
-  max-height: 100px;
-  max-width: 100px;
-}
-
-.cubesat-row-9 {
-  top: 364px;
-  max-height: 110px;
-  max-width: 110px;
-}
-#earth {
-  position: absolute;
-  top: -100px;
-  left: -150px;
-}
-
-#plax-zone {
-  width: 1920px;
-  height: 480px;
-  overflow: hidden;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0px;
-  right: 0px;
-}
-
 </style>
-      <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+
     <?php wp_head();?>
   </head>
 
