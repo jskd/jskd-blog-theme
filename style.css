@@ -27,31 +27,16 @@ div.blog-container {
 
 footer, header {
   padding: 0;
-  background: #333
-}
-
-
-main {
-
-  padding: 0;
-  background: #FFF
-
-
-}
-
-body {
-  background: #333;
 }
 
 header {
   overflow: hidden;
   text-shadow:
-    -5px 0    10px rgba(80,104,127,0.9),
-    0    5px  10px rgba(80,104,127,0.9),
-    5px  0    10px rgba(80,104,127,0.9),
-    0    -5px 10px rgba(80,104,127,0.9);
+    -5px 0    10px #50687f,
+    0    5px  10px #50687f,
+    5px  0    10px #50687f,
+    0    -5px 10px #50687f;
 }
-
 
 /* #7d95ad
  * https://www.w3schools.com/w3css/w3css_color_generator.asp
@@ -79,5 +64,3 @@ header {
 .w3-hover-theme:hover {color:#fff !important; background-color:#7d95ad !important}
 .w3-hover-text-theme {color:#7d95ad !important}
 .w3-hover-border-theme:hover {border-color:#7d95ad !important}
-
-
