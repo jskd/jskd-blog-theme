@@ -189,44 +189,44 @@ body {
   </head>
 
 
-  <body>
+<body>
+
 <nav class="container-fluid w3-top  w3-black  hidden-print padding-0">
-<div class="container">
-  <div class="row no-gutters justify-content-center hidden-xs-down">
-    <div class="col-sm-2">
-      <a href="#" class="w3-button w3-block w3-black">Blog</a>
+  <div class="container">
+    <div class="row no-gutters justify-content-center hidden-xs-down">
+      <div class="col-sm-2">
+        <a href="#" class="w3-button w3-block w3-black">Blog</a>
+      </div>
+      <div class="col-sm-2">
+        <a href="#menu" class="w3-button w3-block w3-black">Projets</a>
+      </div>
+      <div class="col-sm-2">
+        <a href="#about" class="w3-button w3-block w3-black">Tutoriels</a>
+      </div>
+      <div class="col-sm-2">
+        <a href="#where" class="w3-button w3-block w3-black">Contact</a>
+      </div>
+      <div class="col-sm-1">
+        <a href="#" class="w3-button w3-block w3-black">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
-    <div class="col-sm-2">
-      <a href="#menu" class="w3-button w3-block w3-black">Projets</a>
-    </div>
-    <div class="col-sm-2">
-      <a href="#about" class="w3-button w3-block w3-black">Tutoriels</a>
-    </div>
-    <div class="col-sm-2">
-      <a href="#where" class="w3-button w3-block w3-black">Contact</a>
-    </div>
-    <div class="col-sm-1">
-      <a href="#" class="w3-button w3-block w3-black">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </a>
+
+    <!-- Extra small nav -->
+    <div class="row no-gutters justify-content-center hidden-sm-up">
+      <div class="col-8">
+        <a href="#" class="w3-button w3-block w3-black nav-item">
+          <i class="fa fa-bars" aria-hidden="true"></i> Menu
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="#" class="w3-button w3-block w3-black nav-item">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </div>
-
-  <!-- Extra small nav -->
-  <div class="row no-gutters justify-content-center hidden-sm-up">
-    <div class="col-8">
-      <a href="#" class="w3-button w3-block w3-black nav-item">
-        <i class="fa fa-bars" aria-hidden="true"></i> Menu
-      </a>
-    </div>
-    <div class="col-4">
-      <a href="#" class="w3-button w3-block w3-black nav-item">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-</div>
-
 </nav>
 
 <header class="container-fluid text-shadow-black hide-overflow">

@@ -91,8 +91,8 @@
 
 
   // Set earth range
-  $('#earth').data('xrange',300)
-  $('#earth').data('yrange',250)
+  $('#earth').data('xrange',230)
+  $('#earth').data('yrange',230)
 
   // Plaxify
   $('.cubesat').plaxify()
@@ -100,6 +100,7 @@
   $.plax.enable({ "activityTarget": $('header')})
 
 
+  $.plax.enable()
 
 
 
