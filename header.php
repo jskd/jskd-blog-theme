@@ -15,8 +15,8 @@
 
 
 <!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-animate-left w3-theme-d1" style="display:none;z-index:4" id="mySidebar">
-  <button class="w3-bar-item w3-button  w3-theme-l1" onclick="w3_close()">
+<nav id="menu_sidebar" class="w3-sidebar w3-bar-block w3-animate-left w3-theme-d1" style="display:none;z-index:4">
+  <button class="w3-bar-item w3-button  w3-theme-l1" onclick="menu_close()">
     <i class="fa fa-times" aria-hidden="true"></i> Fermer
   </button>
   <a href="#" class="w3-bar-item w3-button">Blog</a>
@@ -26,20 +26,7 @@
 </nav>
 
 <!-- Page Content -->
-<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
-<script>
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-</script>
-
+<div id="menu_overlay" class="w3-overlay w3-animate-opacity" onclick="menu_close()" style="cursor:pointer"></div>
 
     <nav class="container-fluid w3-top  hidden-print padding-0">
       <div class="row w3-theme-d2">
@@ -58,29 +45,28 @@ function w3_close() {
               <a href="#where" class="w3-button w3-block w3-padding">Contact</a>
             </div>
             <div class="col-sm-1">
-              <a href="#" class="w3-button w3-block w3-padding">
+              <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
                 <i class="fa fa-search" aria-hidden="true"></i>
-              </a>
+              </button>
             </div>
           </div>
-
           <!-- Extra small nav -->
           <div class="row no-gutters justify-content-center hidden-sm-up">
             <div class="col-8">
-              <a href="#" onclick="w3_open()" class="w3-button w3-block w3-padding">
+              <button class="w3-button w3-block w3-padding" onclick="menu_open()">
                 <i class="fa fa-bars" aria-hidden="true"></i> Menu
-              </a>
+              </button>
             </div>
             <div class="col-4">
-              <a href="#" class="w3-button w3-block w3-padding">
+              <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
                 <i class="fa fa-search" aria-hidden="true"></i>
-              </a>
+              </button>
             </div>
           </div>
         </div> <!-- Container -->
       </div> <!-- Row -->
 
-      <div class="row w3-theme-d3">
+      <div id="search_bar" class="row w3-theme-d3">
         <div class="container">
           <div class="row no-gutters justify-content-center">
             <div class="col-12 w3-padding">

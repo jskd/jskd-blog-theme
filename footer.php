@@ -107,6 +107,7 @@
     <script src="<?php echo get_theme_file_uri() ?>/assets/css/bootstrap-4.0.0-alpha6-dist/js/bootstrap.min.js"></script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/plax/js/plax.js" ></script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/cubesat-plax.js" ></script>
+    <script src="<?php echo get_theme_file_uri() ?>/assets/js/menu.js" ></script>
     <?php wp_footer(); ?>
 
   </body>
