@@ -29,8 +29,13 @@ footer, header {
   padding: 0;
 }
 
-.none-decoration:hover, .none-decoration:active, .none-decoration:focus {
+.list-style-none {
+  list-style: none;
+}
+
+.decoration-none:hover, .decoration-none:active, .decoration-none:focus {
   text-decoration: none;
+
 }
 
 header {

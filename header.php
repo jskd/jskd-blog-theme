@@ -121,7 +121,6 @@ wp_nav_menu( array(
 wp_nav_menu( array(
   'theme_location' => 'menu-social-icon',
   'container'       => '',
-  'items_wrap'      => '%3$s',
   'link_before' => '',
   'link_after' => '',
   'before' => '',
