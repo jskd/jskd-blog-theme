@@ -4,32 +4,35 @@
     <title>Blog Template for Bootstrap</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/cubesat-plax.css">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/bootstrap-4.0.0-alpha6-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/w3.css">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head();?>
   </head>
   <body class="w3-theme-d5">
 
+    <!-- Overlay -->
+    <div id="menu-overlay" class="w3-overlay w3-animate-opacity" onclick="menu_close()">
+    </div>
+    <div id="search-overlay" class="w3-overlay w3-animate-opacity" onclick="search_close()">
+    </div>
 
-<!-- Sidebar -->
-<nav id="menu_sidebar" class="w3-sidebar w3-bar-block w3-animate-left w3-theme-d1" style="display:none;z-index:4">
-  <button class="w3-bar-item w3-button  w3-theme-l1" onclick="menu_close()">
-    <i class="fa fa-times" aria-hidden="true"></i> Fermer
-  </button>
-  <a href="#" class="w3-bar-item w3-button">Blog</a>
-  <a href="#" class="w3-bar-item w3-button">Projets</a>
-  <a href="#" class="w3-bar-item w3-button">Tutoriels</a>
-  <a href="#" class="w3-bar-item w3-button">Contact</a>
-</nav>
+    <!-- Menu Sidebar -->
+    <nav id="menu-sidebar" class="w3-sidebar w3-bar-block w3-animate-left w3-theme-l1">
+      <button class="w3-bar-item w3-button  w3-theme-d1" onclick="menu_close()">
+        <i class="fa fa-times" aria-hidden="true"></i> Fermer
+      </button>
+      <a href="#" class="w3-bar-item w3-button">Blog</a>
+      <a href="#" class="w3-bar-item w3-button">Projets</a>
+      <a href="#" class="w3-bar-item w3-button">Tutoriels</a>
+      <a href="#" class="w3-bar-item w3-button">Contact</a>
+    </nav>
 
-<!-- Page Content -->
-<div id="menu_overlay" class="w3-overlay w3-animate-opacity" onclick="menu_close()" style="cursor:pointer"></div>
-
-    <nav class="container-fluid w3-top  hidden-print padding-0">
-      <div class="row w3-theme-d2">
+    <!-- Menu top -->
+    <nav id="menu-top" class="container-fluid w3-top hidden-print padding-0">
+      <div class="row w3-theme-d3">
         <div class="container">
           <div class="row no-gutters justify-content-center hidden-xs-down">
             <div class="col-sm-2">
@@ -66,11 +69,12 @@
         </div> <!-- Container -->
       </div> <!-- Row -->
 
-      <div id="search_bar" class="row w3-theme-d3">
+      <!-- Search bar -->
+      <div id="search-bar" class="row w3-theme-l1">
         <div class="container">
           <div class="row no-gutters justify-content-center">
             <div class="col-12 w3-padding">
-              <input type="text" class="w3-bar-item w3-input" placeholder="Rechercher">
+              <?php get_search_form() ?>
             </div>
           </div>
         </div>

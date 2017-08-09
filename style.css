@@ -38,6 +38,30 @@ header {
     0    -5px 10px #50687f;
 }
 
+#menu-sidebar, #search-bar {
+  display:none;
+}
+
+
+#search-overlay {
+  z-index: 1;
+}
+#menu-top {
+  z-index: 2;
+}
+
+#menu-overlay {
+  z-index: 3;
+}
+
+#menu-sidebar {
+  z-index:4
+}
+
+
+
+
+
 /* #7d95ad
  * https://www.w3schools.com/w3css/w3css_color_generator.asp
  */
