@@ -24,10 +24,18 @@
       <button class="w3-bar-item w3-button  w3-theme-d1" onclick="menu_close()">
         <i class="fa fa-times" aria-hidden="true"></i> Fermer
       </button>
-      <a href="#" class="w3-bar-item w3-button">Blog</a>
-      <a href="#" class="w3-bar-item w3-button">Projets</a>
-      <a href="#" class="w3-bar-item w3-button">Tutoriels</a>
-      <a href="#" class="w3-bar-item w3-button">Contact</a>
+      <?php
+        wp_nav_menu( array(
+  'theme_location' => 'menu-sidebar',
+ 'container'       => '',
+  'items_wrap'      => '%3$s',
+  'link_before' => '',
+  'link_after' => '',
+  'before' => '',
+  'after' => '',
+  'walker'  => new WalkerMenuSidebar()
+));
+?>
     </nav>
 
     <!-- Menu top -->
@@ -35,18 +43,21 @@
       <div class="row w3-theme-d3">
         <div class="container">
           <div class="row no-gutters justify-content-center hidden-xs-down">
-            <div class="col-sm-2">
-              <a href="#" class="w3-button w3-block w3-padding">Blog</a>
-            </div>
-            <div class="col-sm-2">
-              <a href="#menu" class="w3-button w3-block w3-padding">Projets</a>
-            </div>
-            <div class="col-sm-2">
-              <a href="#about" class="w3-button w3-block w3-padding">Tutoriels</a>
-            </div>
-            <div class="col-sm-2">
-              <a href="#where" class="w3-button w3-block w3-padding">Contact</a>
-            </div>
+
+
+
+<?php 
+
+wp_nav_menu( array(
+  'theme_location' => 'menu-top',
+  'container'       => '',
+  'items_wrap'      => '%3$s',
+  'link_before' => '',
+  'link_after' => '',
+  'before' => '',
+  'after' => '',
+  'walker'  => new WalkerMenuTop()
+)); ?>
             <div class="col-sm-1">
               <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -113,3 +124,4 @@
 
     <main class="container-fluid w3-theme-l5">
       <div class="container">
+
