@@ -113,10 +113,21 @@ wp_nav_menu( array(
             <span class="w3-xlarge">Passionné d'informatique et de nanosatellite</span>
           </div>
           <div class="w3-display-bottommiddle w3-left w3-right-align w3-xxlarge" style="width: 100%">
-            <i class="fa fa-github-square" aria-hidden="true"></i>
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-            <i class="fa fa-rss-square" aria-hidden="true"></i>
-            <i class="fa fa-envelope-square" aria-hidden="true"></i>
+
+
+
+<?php 
+
+wp_nav_menu( array(
+  'theme_location' => 'menu-social-icon',
+  'container'       => '',
+  'items_wrap'      => '%3$s',
+  'link_before' => '',
+  'link_after' => '',
+  'before' => '',
+  'after' => '',
+  'walker'  => new  WalkerMenuSocialIcon()
+)); ?>
           </div>
         </div>
       </div>

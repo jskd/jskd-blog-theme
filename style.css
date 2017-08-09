@@ -29,6 +29,10 @@ footer, header {
   padding: 0;
 }
 
+.none-decoration:hover, .none-decoration:active, .none-decoration:focus {
+  text-decoration: none;
+}
+
 header {
   overflow: hidden;
   text-shadow:
