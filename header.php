@@ -132,6 +132,6 @@ wp_nav_menu( array(
       </div>
     </header>
 
-    <main class="container-fluid w3-theme-l5">
+    <main class="container-fluid w3-theme-l5" style="padding-top: 24px; padding-bottom: 24px;">
       <div class="container">
 
