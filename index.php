@@ -60,16 +60,25 @@ $the_query = new WP_Query( $args );
 	'end_size'           => 1,
 	'mid_size'           => 2,
 	'prev_next'          => true,
-	'prev_text'          => __('« Previous'),
-	'next_text'          => __('Next »'),
-	'type'               => 'array',
+	'prev_text'          => __('&laquo;'),
+	'next_text'          => __('&raquo;'),
+	'type'               => 'plain',
 	'add_args'           => false,
 	'add_fragment'       => '',
 	'before_page_number' => '',
 	'after_page_number'  => ''
 ); ?>
+<div class="w3-center">
+<div class="w3-bar w3-border w3-round">
+<?php 
+$paginate= paginate_links( $args );
+$paginate=str_replace("page-numbers", "w3-button w3-hover-theme", $paginate);
+$paginate=str_replace("current", "w3-theme-d1", $paginate);
+echo $paginate;
+?>
+</div>
+</div>
 
-<?php print_r( paginate_links( $args )); ?>
 
 		</div> <!-- /.blog-main -->
 
