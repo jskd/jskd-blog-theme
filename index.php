@@ -15,22 +15,61 @@ Tags: blog bootstrap
 		<div class="col-md-8">
 
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+<?php
+// set the "paged" parameter (use 'page' if the query is on a static front page)
+if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+else { $paged = 1; 
+}
 
-			// Include the page content template.
-			get_template_part( 'content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+$args = array(
+  'posts_per_page' => 3,
+  'paged'          => $paged
+);
 
-		// End the loop.
-		endwhile;
-		?>
+$the_query = new WP_Query( $args ); 
 
+?>
+
+
+<?php if ( $the_query->have_posts() ) : ?>
+
+	<!-- pagination here -->
+
+	<!-- the loop -->
+	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		<h2><?php the_title(); ?></h2>
+	<?php endwhile; ?>
+	<!-- end of the loop -->
+
+	<!-- pagination here -->
+
+	<?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
+<?php $args = array(
+	'format'             => 'page/%#%',
+	'total'              => 1,
+  'current'            => $paged,
+  'total' => $the_query->max_num_pages,
+	'show_all'           => true,
+	'end_size'           => 1,
+	'mid_size'           => 2,
+	'prev_next'          => true,
+	'prev_text'          => __('« Previous'),
+	'next_text'          => __('Next »'),
+	'type'               => 'array',
+	'add_args'           => false,
+	'add_fragment'       => '',
+	'before_page_number' => '',
+	'after_page_number'  => ''
+); ?>
+
+<?php print_r( paginate_links( $args )); ?>
 
 		</div> <!-- /.blog-main -->
 
