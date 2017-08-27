@@ -18,7 +18,7 @@ $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
 	while ( $the_query->have_posts() ) {
 		$the_query->the_post();
-		echo '<li class="w3-padding-small"><a href="'.get_permalink().'" class="decoration-none w3-hover-theme w3-block w3-padding decoration-none">' . get_the_title() . '</a></li>';
+		echo '<li class="padding-left-0 padding-right-0"><a href="'.get_permalink().'" class="decoration-none w3-hover-theme w3-block w3-padding decoration-none">' . get_the_title() . '</a></li>';
 	}
 	wp_reset_postdata();
 }
@@ -47,7 +47,7 @@ if ( $comments ) {
 
 ?>
 
-<li style="padding-left: 0; padding-right: 0;">
+<li class="padding-left-0 padding-right-0">
   <a href=" <?php echo get_permalink( $comment->comment_post_ID ) . '#comment-' . $comment->comment_ID ; ?>" class="decoration-none w3-hover-theme w3-block w3-padding decoration-none">
 
     <div class="w3-row" style="line-height: 1em;">
