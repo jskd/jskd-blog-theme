@@ -40,8 +40,8 @@ $paginate = preg_replace("/<\/?div[^>]*\>/i", "", $paginate);
 // Remove title
 $paginate = preg_replace("/<h2[^<]*<\/h2\>/i", "", $paginate); 
 // Add w3.css style
-$paginate = preg_replace("/<a href=/", '<a class="w3-button w3-ripple w3-theme-l1 w3-hover-theme" href=', $paginate, 1); 
-$paginate = preg_replace("/<a href=/", '<a class="w3-button w3-ripple w3-theme-l1 w3-hover-theme w3-right " href=', $paginate, 1); 
+$paginate = str_replace('rel="prev"', 'class="w3-btn w3-border w3-ripple w3-hover-theme" rel="prev"', $paginate); 
+$paginate = str_replace('rel="next"', 'class="w3-btn w3-border w3-ripple w3-hover-theme w3-right" rel="next"', $paginate); 
 
 echo($paginate);
 
