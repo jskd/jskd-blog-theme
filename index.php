@@ -51,7 +51,15 @@ $the_query = new WP_Query( $args );
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 
-<?php $args = array(
+<?php
+add_filter( 'paginate_links', function( $link )
+{
+    return  
+       filter_input( INPUT_GET, 'nk' )
+       ? remove_query_arg( 'nk', $link )
+       : $link;
+} );
+$args = array(
 	'format'             => 'page/%#%',
 	'total'              => 1,
   'current'            => $paged,
