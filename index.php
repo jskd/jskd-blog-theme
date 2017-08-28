@@ -14,7 +14,7 @@ Tags: blog bootstrap
 
 		<div class="col-md-8">
 
-
+(index)
 <?php
 // set the "paged" parameter (use 'page' if the query is on a static front page)
 if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
@@ -32,14 +32,14 @@ $the_query = new WP_Query( $args );
 
 ?>
 
-
 <?php if ( $the_query->have_posts() ) : ?>
 
 	<!-- pagination here -->
 
 	<!-- the loop -->
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-		<h2><?php the_title(); ?></h2>
+    <h2><?php the_title(); ?></h2>
+    <?php the_content(); ?>
 	<?php endwhile; ?>
 	<!-- end of the loop -->
 
@@ -73,17 +73,16 @@ $the_query = new WP_Query( $args );
 <?php 
 $paginate= paginate_links( $args );
 $paginate=str_replace("page-numbers", "w3-button w3-hover-theme", $paginate);
-$paginate=str_replace("current", "w3-theme-d1", $paginate);
+$paginate=str_replace("w3-hover-theme current", "w3-theme-d1 pointer-events-none", $paginate);
 echo $paginate;
 ?>
 </div>
 </div>
 
-
-		</div> <!-- /.blog-main -->
+		</div> <!-- col -->
 
 		<?php get_sidebar(); ?>
 
-	</div> <!-- /.row -->
+	</div> <!-- row -->
 
 <?php get_footer(); ?>

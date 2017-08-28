@@ -44,6 +44,11 @@ footer, header {
 
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
+
 header {
   overflow: hidden;
   text-shadow:
