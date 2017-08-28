@@ -63,15 +63,30 @@ function bootstrap3_comment_form_fields( $fields ) {
     $inputclass= "w3-input w3-hover-theme w3-theme-l4 w3-border-0";
 
     $fields   =  array(
-        'author' => '<div class="form-group comment-form-author">' . '<label for="author"> Nom ou pseudonyme '. ( $req ? ' <span class="required">*</span>' : '' ) . '</label>
+      'author' => '<div class="form-group comment-form-author">
+      
+      ' . '<label for="author">
+<i class="fa fa-user-o" aria-hidden="true"></i>
+     
+
+ Nom ou pseudonyme '. ( $req ? ' <span class="required">*</span>' : '' ) . '</label>
             <label for="author" class="w3-right w3-text-red">Obligatoire</label> ' .
                     '<input required class="'.$inputclass.'" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-        'email'  => '<p><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ). '</label>
+                      'email'  => '<p><label for="email">
+<i class="fa fa-envelope-o" aria-hidden="true"></i>
+                      
+                      
+                      
+                      ' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ). '</label>
             <label for="email" class="w3-right w3-text-red">Obligatoire</label> ' .
         '<input required class="'.$inputclass.'" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
         <label for="email" class="w3-small w3-right">'. __( 'Your email address will not be published.' ) . '</label>
         </p>',
-        'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label> ' .
+'url'    => '<p class="comment-form-url"><label for="url">
+<i class="fa fa-globe" aria-hidden="true"></i>
+
+
+' . __( 'Website' ) . '</label> ' .
                     '<input class="'.$inputclass.'" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>'        
     );
     
@@ -82,7 +97,11 @@ function bootstrap3_comment_form_fields( $fields ) {
 add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
 function bootstrap3_comment_form( $args ) {
     $args['comment_field'] = '<div class="form-group comment-form-comment">
-            <label for="comment">' . _x( 'Comment', 'noun' ) . ' <span class="required">*</span></label>
+            <label for="comment">
+            
+<i class="fa fa-comment-o" aria-hidden="true"></i>
+            
+            ' . _x( 'Comment', 'noun' ) . ' <span class="required">*</span></label>
             <label for="comment" class="w3-right w3-text-red">Obligatoire</label>
             <textarea required class="w3-input w3-hover-theme w3-theme-l4 w3-border-0" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>'.
             '<label for="comment"class="form-allowed-tags w3-small w3-right-align">' .
