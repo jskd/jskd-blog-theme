@@ -83,8 +83,27 @@ if ( $comments ) {
 	echo 'No comments found.';
 }
 ?>
+
       </ul>
     </div>
+
+
    </div>
+ <div class="w3-card-4 w3-margin-top">
+<form class="w3-container" method="post" action="http://localhost/~jskd/blog/?na=s" onsubmit="return newsletter_check(this)">
+<h2>Newsletter</h2>
+Restez informés en vous inscrivant à la newsletter
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+
+    <div class="w3-rest">
+
+
+      <input class="w3-input w3-border" name="ne" type="text" required placeholder="Email">
+</div>
+
+
+<button class="w3-button w3-section w3-blue w3-ripple">S'abonner</button>
+
   </div>
 </div><!-- /.blog-sidebar -->

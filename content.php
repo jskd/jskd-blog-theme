@@ -27,13 +27,8 @@ endif;
 
 	<div class="entry-content">
 		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s', 'twentyfifteen' ),
-				the_title( '<span class="screen-reader-text">', '</span>', false )
-			) );
-the_content();
 
+ echo do_shortcode(get_the_content());
 
 
 			wp_link_pages( array(
@@ -47,19 +42,6 @@ the_content();
 		?>
 	</div><!-- .entry-content -->
 
-<form class="w3-container" method="post" action="http://localhost/~jskd/blog/?na=s" onsubmit="return newsletter_check(this)">
-<h2>Newsletter</h2>
-<div class="w3-row w3-section">
-  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
-
-    <div class="w3-rest">
-
-
-      <input class="w3-input w3-border" name="ne" type="text" required placeholder="Email">
-</div>
-
-
-<button class="w3-button w3-section w3-blue w3-ripple">S'abonner</button>
 
 
 
