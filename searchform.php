@@ -1,5 +1,5 @@
 <div class="container" style="margin: 0; padding: 0;">
-  <form class="row no-gutters justify-content-center"  role="search" method="get" id="searchform" action="http://localhost/~jskd/blog/">
+  <form class="row no-gutters justify-content-center"  role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
     <div class="col-8">
       <input class="w3-input" required placeholder="Chercher" value="" name="s" id="s" type="text">
     </div>
