@@ -61,3 +61,27 @@ function submit_newsletter_modal() {
     }
   })
 }
+
+$("#newsletter-sidebar-form").submit(function(e) {
+  submit_newsletter_sidebar()
+  e.preventDefault()
+})
+function submit_newsletter_sidebar() {
+  $.ajax({
+    type:"POST",
+    url:"/?na=s",
+    data: $("#newsletter-sidebar-form").serialize(),
+    success: function (da) {
+      if(da=='Wrong email'){
+        $("#newsletter-sidebar-error").show()
+        $("#newsletter-sidebar-sucess").hide()
+      }
+      else {
+        $("#newsletter-sidebar-error").hide()
+        $("#newsletter-sidebar-sucess").show()
+        $("#newsletter-sidebar-form").hide()
+        $("#newsletter-sidebar-submit").hide()
+      }
+    }
+  })
+}

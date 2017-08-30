@@ -147,16 +147,16 @@ wp_nav_menu( array(
 
           Restez informés en vous inscrivant à la newsletter. 
         </div>
-        <form id="newsletter-modal-form" class="newsletter-form" action="/?na=s">
+        <form id="newsletter-modal-form" method="post" action="/?na=s">
           <div class="w3-container w3-margin-top">
-            <label for="email">
+            <label for="newsletter-modal-email">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
               Adresse de messagerie *
             </label>
             <label for="newsletter-modal-email" class="w3-right w3-text-red">
               Obligatoire
             </label>
-            <input required id="enewsletter-modal-mail" name="ne" type="email"
+            <input required id="newsletter-modal-mail" name="ne" type="email"
               class="w3-input w3-hover-theme w3-theme-l4 w3-border-0" value=""
               placeholder="Entrer son email pour s'abonner" size="30">
             <label for="enewsletter-modal-mail" class="w3-small w3-right">

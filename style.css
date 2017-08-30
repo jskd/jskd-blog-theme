@@ -58,7 +58,9 @@ header {
     0    -5px 10px #50687f;
 }
 
-#menu-sidebar, #search-bar {
+#menu-sidebar, #search-bar,
+#newsletter-sidebar-error, #newsletter-sidebar-sucess,
+#newsletter-sidebar-error, #newsletter-sidebar-sucess {
   display:none;
 }
 
