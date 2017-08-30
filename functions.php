@@ -162,10 +162,10 @@ class WalkerMenuSocialIcon extends Walker {
   
   function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     $output .= sprintf(
-      '<a href="%s" title="%s" class="decoration-none">
+      '<a href="%s" title="%s" class="decoration-none %s">
         <i class="fa %s fa-fw"></i>
       </a>',
-      $item->url, $item->title, $item->classes[0] );
+    $item->url, $item->title, $item->attr_title, $item->classes[0] );
   }
 }
 
@@ -184,9 +184,9 @@ class WalkerMenuSocialList extends Walker {
    */
   function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     $output .= sprintf(
-      '<li><a href="%s" class="decoration-none w3-hover-theme">
+      '<li><a href="%s" class="decoration-none w3-hover-theme %s">
         <i class="fa %s fa-fw"></i> %s
       </a></li>',
-      $item->url, $item->classes[0], $item->title );
+      $item->url, $item->attr_title, $item->classes[0], $item->title );
   }
 }

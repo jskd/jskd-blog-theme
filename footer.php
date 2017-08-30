@@ -103,5 +103,25 @@ wp_nav_menu( array(
 
 </script>
 
+<script>
+  $("#news").submit(function(e) {
+    $.ajax({
+      type:"POST",
+      url:"/?na=s",
+      data: $("#news").serialize(),
+      success: function (da) {
+        alert(da);
+
+        if(da=='error'){ jQuery('.newsletter-email').css();}
+        else if(da=='already_confirmed'){ jQuery('.news-success-msg').html('<p><span></span>You have already subscribed to Adonis newsletter.</p>').show();}
+        else if(da=='Wrong email'){ jQuery('.news-success-msg').html('<p><span></span>The e-mail entered is not valid. Please check and resubmit.</p>').show(); }
+        else { jQuery('.news-success-msg').html('<p><span></span>You have successfully subscribed to Adonis newsletter with '+email+'.</p>').show(); jQuery('.input_clear').val('');
+        }
+      }
+    });
+    e.preventDefault(); 
+  });
+
+</script>
   </body>
 </html>

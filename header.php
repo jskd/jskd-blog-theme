@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/cubesat-plax.css">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/bootstrap-4.0.0-alpha6-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/w3.css">
+   <!-- <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/w3-theme-blue-grey.css"> -->
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head();?>
