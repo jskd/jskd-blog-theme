@@ -49,7 +49,7 @@ footer, header {
 }
 
 
-header {
+#web-banner {
   overflow: hidden;
   text-shadow:
     -5px 0    10px #50687f,

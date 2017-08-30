@@ -1,4 +1,4 @@
-<div class="col-md-4 col-md-offset-8">
+<aside class="col-md-4 col-md-offset-8 hidden-print w3-padding-16">
   <div class="w3-card-4">
     <div class="w3-container w3-theme-d1">
       <h3>Derniers articles</h3>
@@ -69,7 +69,7 @@ if ( $comments ) {
 <?php echo get_the_title(   $comment->comment_post_ID  ) ?> <br>
 <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>
 
-<?php echo date_i18n( get_option( 'date_format' ), strtotime(  $comment->comment_date ))   ?>
+<?php echo date_i18n("j F", strtotime(  $comment->comment_date ))   ?>
 
 
 </div></div>
@@ -128,4 +128,4 @@ if ( $comments ) {
 
 </div>
   </div>
-</div><!-- /.blog-sidebar -->
+</aside><!-- /.blog-sidebar -->

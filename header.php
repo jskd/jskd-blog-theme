@@ -93,7 +93,7 @@ wp_nav_menu( array(
       </div>
     </nav>
 
-    <header class="container-fluid w3-theme-d4">
+    <header id="web-banner" class="container-fluid w3-theme-d4 hidden-print padding-0">
       <div id="plax-zone">
         <img id="earth" src="<?php echo get_theme_file_uri() ?>/assets/images/header/header.jpg" alt="earth web banner">
         <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-0.png" alt="cubesat 0">
@@ -184,5 +184,5 @@ wp_nav_menu( array(
      </div>
      </div>
 
-    <main class="container-fluid w3-theme-l5" style="padding-top: 24px; padding-bottom: 24px;">
+    <main class="container-fluid w3-theme-l5 padding-0 w3-padding-16" >
       <div class="container"> 

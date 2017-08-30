@@ -1,7 +1,7 @@
       </div> <!-- /.container -->
     </main>
 
-    <footer class="container-fluid  w3-theme-d4 w3-medium">
+    <footer class="container-fluid  w3-theme-d4 w3-medium hidden-print">
       <div class="row">
         <div class="col-12">
           <div class="container footer-container" >

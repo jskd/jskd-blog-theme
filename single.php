@@ -12,7 +12,8 @@ Tags: blog bootstrap
 
 	<div class="row">
 
-		<div class="col-md-8">
+		<div class="col-md-8 w3-padding-16">
+
 
 		<?php
 		// Start the loop.
