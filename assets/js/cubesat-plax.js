@@ -52,13 +52,13 @@ function plaxifyHeader() {
   $('.cubesat-row-9').data('yrange',250)
 
   // Set earth range
-  $('#earth').data('xrange',230)
-  $('#earth').data('yrange',230)
+  $('#earth').data('xrange',200)
+  $('#earth').data('yrange',200)
 
   // Plaxify
   $('.cubesat').plaxify()
   $('#earth').plaxify()
-  $.plax.enable({ "activityTarget": $('header')})
+  $.plax.enable({ "activityTarget": $('#web-banner')})
 }
 
 $(document).ready(function () {
