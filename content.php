@@ -11,7 +11,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 		<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -20,18 +19,11 @@
 endif;
 
 		?>
-
-
-
-
-
 	<div class="entry-content">
-		<?php
-
- echo do_shortcode(get_the_content());
-
-
-			wp_link_pages( array(
+		<?php echo apply_filters('the_content', get_the_content()); ?>
+  </div>
+  <div class="navigation-link">
+    <?php	wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
@@ -41,9 +33,4 @@ endif;
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-
-
-
-</form>
 </article><!-- #post-## -->

@@ -1,5 +1,8 @@
 <?php
 
+remove_filter('the_content', 'wpautop');
+
+
 function register_my_menus() {
   register_nav_menus(
     array(
@@ -16,6 +19,9 @@ add_action( 'init', 'register_my_menus' );
 
 $req_class="w3-right w3-text-red";
 $input_class="w3-input w3-hover-theme w3-theme-l4 w3-border-0";
+
+
+
 
 add_filter( 'comment_form_default_fields', 'w3css_comment_form_fields' );
 function w3css_comment_form_fields( $fields ) {
