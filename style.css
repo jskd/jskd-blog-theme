@@ -20,7 +20,26 @@ div.blog-container {
   overflow: hidden;
 }
 
+.comment-avatar {
+  height: 100%;
+  width: 100%;
+}
 
+.section-avatar {
+  padding: 0.25em 0.5em 0.25em 0;
+  width: 4.5em;
+  height: 4.5em;
+}
+
+.section-comment {
+  padding: 0.25em 0.5em 0.25em 0;
+  height: 4.5em;
+  line-height: 1em;
+}
+.section-detail {
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  line-height: 1.25em;
+}
 .padding-0 {
   padding: 0;
 }

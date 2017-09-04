@@ -48,28 +48,26 @@ if ( $comments ) {
 ?>
 
 <li class="padding-left-0 padding-right-0">
-  <a href=" <?php echo get_permalink( $comment->comment_post_ID ) . '#comment-' . $comment->comment_ID ; ?>" class="decoration-none w3-hover-theme w3-block w3-padding decoration-none">
+  <a href=" <?php echo get_permalink( $comment->comment_post_ID ) . '#comment-' . $comment->comment_ID ; ?>" class="decoration-none w3-hover-theme w3-block w3-padding-small decoration-none">
 
-    <div class="w3-row" style="line-height: 1em;">
-      <div class="w3-col w3-tooltip" style="width: 3em;">
-        <span style="position:absolute;left:0;bottom:18px" class="w3-text w3-tag">
-          <?php echo $comment->comment_author; ?>
-        </span>
-        <?php echo get_avatar( $comment->comment_author_email, 45, $default, $alt, array(
-          'class' => 'w3-left w3-circle w3-margin-right'
+    <div class="w3-row">
+      <div class="w3-col w3-tooltip section-avatar">
+        <?php echo get_avatar( $comment->comment_author_email, 96, $default, $alt, array(
+          'class' => 'w3-left w3-margin-right comment-avatar'
         )); ?> 
       </div>
-    <!--<div class="w3-rest comment-ellipsis" style="height: 3em; line-height: 1em;     overflow:hidden;
-    text-overflow:ellipsis; text-overflow: '…';">-->
-    <div class="w3-rest comment-ellipsis" style="height: 3em; line-height: 1em;">
+    <div class="w3-rest comment-ellipsis section-comment">
 
 <?php echo wp_filter_nohtml_kses(  $comment->comment_content ) ?>
-</div><div class="w3-panel w3-leftbar" style="margin-top: 8px; margin-bottom: 0px;">
+</div><div class="w3-leftbar w3-small section-detail">
 <i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>
 <?php echo get_the_title(   $comment->comment_post_ID  ) ?> <br>
 <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>
 
-<?php echo date_i18n("j F", strtotime(  $comment->comment_date ))   ?>
+<?php echo date_i18n("j F", strtotime(  $comment->comment_date ))   ?> <br>
+
+<i class="fa fa-user-o fa-fw" aria-hidden="true"></i>
+<?php echo $comment->comment_author; ?>
 
 
 </div></div>

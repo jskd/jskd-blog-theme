@@ -2,7 +2,6 @@
 
 remove_filter('the_content', 'wpautop');
 
-
 function register_my_menus() {
   register_nav_menus(
     array(
