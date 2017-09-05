@@ -34,7 +34,8 @@ if ( $the_query->have_posts() ) {
       <ul class="w3-ul">
 <?php 
 $args = array(
-    'number' => 2
+  'number' => 2,
+  'status' => 'approve'
 );
 
 // The Query
@@ -59,7 +60,7 @@ if ( $comments ) {
     <div class="w3-rest comment-ellipsis section-comment">
 
 <?php echo wp_filter_nohtml_kses(  $comment->comment_content ) ?>
-</div><div class="w3-leftbar w3-small section-detail">
+</div><div class="w3-leftbar w3-border-blue w3-small section-detail">
 <i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>
 <?php echo get_the_title(   $comment->comment_post_ID  ) ?> <br>
 <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>

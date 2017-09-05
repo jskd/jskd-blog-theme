@@ -144,7 +144,7 @@ wp_nav_menu( array(
           <h2>Abonnement à la newsletter</h2>
         </header>
           <div class="w3-container w3-margin-top">
-
+<?php echo do_shortcode('[mailpoet_form id="1"]'); ?>
           Restez informés en vous inscrivant à la newsletter. 
         </div>
         <form id="newsletter-modal-form" method="post" action="/?na=s">

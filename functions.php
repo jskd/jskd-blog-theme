@@ -1,5 +1,7 @@
 <?php
 
+require_once( __DIR__ . '/walker/comment.php');
+
 remove_filter('the_content', 'wpautop');
 
 function register_my_menus() {
@@ -19,7 +21,14 @@ add_action( 'init', 'register_my_menus' );
 $req_class="w3-right w3-text-red";
 $input_class="w3-input w3-hover-theme w3-theme-l4 w3-border-0";
 
+function theme_queue_js(){
+  if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') )
+    wp_enqueue_script( 'comment-reply' );
+}
 
+
+
+add_action('wp_print_scripts', 'theme_queue_js');
 
 
 add_filter( 'comment_form_default_fields', 'w3css_comment_form_fields' );
@@ -53,6 +62,7 @@ function w3css_comment_form_fields( $fields ) {
           '. __( 'Your email address will not be published.' ) .'
         </label>
       </p>',
+/*
     'url' => '
       <p>
         <label for="url">
@@ -61,7 +71,8 @@ function w3css_comment_form_fields( $fields ) {
         </label>
         <input class="'.$input_class.'" id="url" name="url" type="url"
           value="'.esc_attr($commenter['comment_author_url']).'" size="30" />
-      </p>',
+          </p>',
+ */
   );
   return $fields;
 }
