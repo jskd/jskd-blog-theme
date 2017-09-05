@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head();?>
   </head>
-  <body class="w3-theme-d5">
-
+  <body class="<?php echo join(' ', get_body_class()); ?> w3-theme-d5">
     <!-- Overlay -->
     <div id="menu-overlay" class="w3-overlay w3-animate-opacity" onclick="menu_close()">
     </div>

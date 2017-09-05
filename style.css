@@ -5,11 +5,20 @@ Description: Bootstrap Blog template
 Version: 0.0.1
 Tags: bootstrap
 */
+body.admin-bar #menu-top {
+ top: 32px !important;
+}
 
 .anchor {
     display: block;
-    padding-top: 40px;
-    margin-top: -40px;
+    padding-top: 39px;
+    margin-top: -39px;
+}
+
+body.admin-bar .anchor {
+    display: block;
+    padding-top: 71px;
+    margin-top: -71px;
 }
 
 .header-container {
