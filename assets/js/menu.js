@@ -21,67 +21,11 @@ function search_close() {
 
 $( document ).ready(function() {
   $(".open-newsletter-modal").click(function(e) {
-    $('#newsletter-modal-form')[0].reset();
-    $("#newsletter-modal-form").show()
-    $("#newsletter-modal-error").hide()
-    $("#newsletter-modal-sucess").hide()
-    $("#newsletter-modal-submit").show()
-    $("#newsletter-modal-close").html("Annuler")
-    $("#newsletter-modal").show();
+     $("#newsletter-modal").show();
     e.preventDefault();
   });
 });
 
 function close_newsletter_modal() {
   $("#newsletter-modal").hide();
-}
-
-$("#newsletter-modal-form").submit(function(e) {
-  submit_newsletter_modal()
-  e.preventDefault()
-})
-
-function submit_newsletter_modal() {
-  $.ajax({
-    type:"POST",
-    url:"/?na=s",
-    data: $("#newsletter-modal-form").serialize(),
-    success: function (da) {
-      if(da=='Wrong email'){
-        $("#newsletter-modal-error").show()
-        $("#newsletter-modal-sucess").hide()
-      }
-      else {
-        $("#newsletter-modal-error").hide()
-        $("#newsletter-modal-sucess").show()
-        $("#newsletter-modal-form").hide()
-        $("#newsletter-modal-submit").hide()
-        $("#newsletter-modal-close").html("Fermer")
-      }
-    }
-  })
-}
-
-$("#newsletter-sidebar-form").submit(function(e) {
-  submit_newsletter_sidebar()
-  e.preventDefault()
-})
-function submit_newsletter_sidebar() {
-  $.ajax({
-    type:"POST",
-    url:"/?na=s",
-    data: $("#newsletter-sidebar-form").serialize(),
-    success: function (da) {
-      if(da=='Wrong email'){
-        $("#newsletter-sidebar-error").show()
-        $("#newsletter-sidebar-sucess").hide()
-      }
-      else {
-        $("#newsletter-sidebar-error").hide()
-        $("#newsletter-sidebar-sucess").show()
-        $("#newsletter-sidebar-form").hide()
-        $("#newsletter-sidebar-submit").hide()
-      }
-    }
-  })
 }
