@@ -22,6 +22,7 @@ class MailpoetFormCustom {
       ), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD
     );
 
+    // Set dom element
     $this->xpath = new DomXPath($this->dom);
     $items = $this->xpath->query("//input[contains(@class, 'mailpoet_submit')]");
     $this->submit_button= $items->item(0);
@@ -63,7 +64,7 @@ class MailpoetFormCustom {
   }
 
   public function addButton($text, $attr) {
-    $close_button = createElement($doc, 'button', $text, $attr);
+    $close_button = $this->createElement($this->dom, 'button', $text, $attr);
     $this->submit_paragraph->appendChild($close_button);
   }
 
