@@ -113,11 +113,7 @@ wp_nav_menu( array(
             <span class="w3-xlarge">Passionné d'informatique et de nanosatellite</span>
           </div>
           <div class="w3-display-bottommiddle w3-left w3-right-align w3-xxlarge" style="width: 100%">
-
-
-
 <?php 
-
 wp_nav_menu( array(
   'theme_location' => 'menu-social-icon',
   'container'       => '',
@@ -125,6 +121,7 @@ wp_nav_menu( array(
   'link_after' => '',
   'before' => '',
   'after' => '',
+'menu_class' => 'menu-social-icon',
   'walker'  => new  WalkerMenuSocialIcon()
 )); ?>
           </div>

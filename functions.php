@@ -179,9 +179,9 @@ class WalkerMenuSocialIcon extends Walker {
   
   function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     $output .= sprintf(
-      '<a href="%s" title="%s" class="decoration-none %s">
+      '<li><a href="%s" title="%s" class="decoration-none %s">
         <i class="fa %s fa-fw"></i>
-      </a>',
+      </a></li>',
     $item->url, $item->title, $item->attr_title, $item->classes[0] );
   }
 }

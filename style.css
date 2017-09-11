@@ -9,6 +9,9 @@ body.admin-bar #menu-top {
  top: 32px !important;
 }
 
+ul.menu-social-icon > li {
+display: inline-block;
+}
 .anchor {
     display: block;
     padding-top: 39px;
