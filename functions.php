@@ -1,6 +1,7 @@
 <?php
 
 require_once( __DIR__ . '/walker/comment.php');
+require_once( __DIR__ . '/class/mailpoet-form-custom.php');
 
 remove_filter('the_content', 'wpautop');
 

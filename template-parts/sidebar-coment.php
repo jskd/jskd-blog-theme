@@ -26,7 +26,7 @@ if ( $comments ) {
 
     <div class="w3-row">
       <div class="w3-col w3-tooltip section-avatar">
-        <?php echo get_avatar( $comment->comment_author_email, 96, $default, $alt, array(
+        <?php echo get_avatar( $comment->comment_author_email, 96, "", false, array(
           'class' => 'w3-left w3-margin-right comment-avatar'
         )); ?> 
       </div>
