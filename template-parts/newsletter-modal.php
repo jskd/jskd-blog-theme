@@ -8,6 +8,9 @@
 		  </span>
 		  <h2>Abonnement à la newsletter</h2>
     </header>
+    <div class="w3-container w3-margin-top">
+      Restez informés en vous inscrivant à la newsletter.
+    </div>
     <?php
       $form= new MailpoetFormCustom();
       $form->addClassSubmitButton('w3-button w3-green w3-margin-right');

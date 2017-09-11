@@ -1,7 +1,9 @@
 <header class="w3-container w3-theme-d1">
   <h3>Newsletter</h3>
 </header>
-
+<div class="w3-container w3-margin-top">
+  Restez informés en vous inscrivant à la newsletter.
+</div>
 <div class="w3-container" >
   <?php
     $form= new MailpoetFormCustom();
