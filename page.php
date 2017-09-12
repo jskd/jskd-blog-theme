@@ -10,25 +10,17 @@ Tags: blog bootstrap
 
 <?php get_header(); ?>
 
-	<div class="row">
-
-		<main class="col-md-8 w3-padding-16">
-
-
-
-<?php
-
-echo '<a href="'.get_home_url().'">Acceuil</a>';
-
-foreach($post->ancestors as $ancestor)
-
-  echo ' <i class="fa fa-caret-right" aria-hidden="true"></i> <a href="'.get_permalink($ancestor).'">'.get_the_title($ancestor).'</a>';
-
-
-echo ' <i class="fa fa-caret-right" aria-hidden="true"></i> '.get_the_title($post);
-
-?>
-
+<div class="row">
+  <main class="col-md-8 w3-padding-16">
+    <div class="w3-small">
+      <a href="<?php echo get_home_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a>
+      <?php foreach($post->ancestors as $ancestor) { ?>
+        <i class="fa fa-caret-right" aria-hidden="true"></i>
+        <a href="<?php echo get_permalink($ancestor); ?>"><?php echo get_the_title($ancestor); ?></a>
+      <?php } ?>
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+      <?php echo get_the_title($post); ?>
+    </div>
 
 		<?php
 		// Start the loop.
