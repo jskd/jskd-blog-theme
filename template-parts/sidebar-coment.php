@@ -1,10 +1,6 @@
 
 
-    <div class="w3-container w3-theme-d1">
-      <h3>Derniers comentaires</h3>
-    </div>
-    <div class="w3-container">
-      <ul class="w3-ul">
+
 <?php 
 $args = array(
   'number' => 2,
@@ -17,6 +13,19 @@ $comments = $comments_query->query( $args );
 
 // Comment Loop
 if ( $comments ) {
+?>
+
+    <div class="w3-container w3-theme-d1">
+      <h3>Derniers comentaires</h3>
+    </div>
+    <div class="w3-container">
+      <ul class="w3-ul">
+
+
+
+<?php
+
+
   foreach ( $comments as $comment ) {
 
 ?>
@@ -48,15 +57,15 @@ if ( $comments ) {
       </a></li>
 
 <?php
+  }
+?>
+      </ul>
+    </div>
 
-
-	}
-} else {
-	echo 'No comments found.';
+<?php
 }
 ?>
 
-      </ul>
-    </div>
+
 
 

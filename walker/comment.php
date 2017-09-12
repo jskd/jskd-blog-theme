@@ -246,7 +246,7 @@ class jskd_Walker_Comment extends Walker {
       <strong><?php _e( 'Your comment is awaiting moderation.' ); ?></strong>
     </div>
     <?php endif; ?>
-    <article id="div-comment-<?php comment_ID(); ?>" class="comment-body <?php echo $class ?> w3-container padding-0">
+    <article id="div-comment-<?php comment_ID(); ?>" class="comment-body w3-container padding-0">
       <footer class="w3-row w3-margin-bottom">
         <div class="w3-col" style="width: <?php echo $args['avatar_size']+10; ?>px;">
 					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
