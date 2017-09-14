@@ -59,7 +59,9 @@ function pdesc_button( $atts, $content = null ) {
   $a = shortcode_atts( array(
 		'href' => '',
 	), $atts );
-	return '<a class="w3-btn w3-white w3-border w3-border-blue w3-round" style="width:100%" href="' . esc_attr($a['href']) . '"> ' . do_shortcode($content) . '</a>';
+  return '<a class="w3-btn w3-white w3-border w3-border-blue w3-round"
+    target="_blank" style="width:100%" href="' . esc_attr($a['href']) . '">
+    ' . do_shortcode($content) . '</a>';
 }
 add_shortcode( 'pdesc-button', 'pdesc_button' );
 
