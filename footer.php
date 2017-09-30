@@ -42,17 +42,25 @@ wp_nav_menu( array(
           </div>
         </div>
       </div>
-      <div class="row w3-theme-d5 padding-0">
-        <div class="container padding-0">
-          <div class="col-12 w3-right-align padding-0">
-            <p class="w3-margin-top w3-margin-bottom">
-            © Copyright 2017 – <a class="decoration-none w3-hover-theme" href="<?php get_home_url(); ?>">jeromeskoda.fr</a>
-            </p>
+      <div class="row w3-theme-d5">
+        <div class="container">
+          <div class="col-12 padding-0 w3-margin-top w3-margin-bottom">
+            <div class="w3-cell-row">
+              <div class="w3-container w3-cell w3-cell-middle w3-small padding-0 w3-right-align">
+                Ce site est mis à disposition selon les termes de la
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International</a><br>
+                Copyright © 2017 <a class="decoration-none w3-hover-theme" href="<?php get_home_url(); ?>">jeromeskoda.fr</a>
+              </div>
+              <div class="w3-container w3-cell w3-cell-middle w3-small padding-0 w3-center">
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                  <img alt="Licence Creative Commons" style="border-width:0; margin: auto 0 auto 10px;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/jquery-3.2.1.min.js" type="text/javascript"> </script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/css/bootstrap-4.0.0-alpha6-dist/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/plax/js/plax.js" type="text/javascript"></script>
@@ -60,7 +68,6 @@ wp_nav_menu( array(
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/cubesat-plax.js" type="text/javascript"></script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/menu.js" type="text/javascript"></script>
     <?php wp_footer(); ?>
-
 <script>
     $(document).ready(function() {
     	$(".comment-ellipsis").dotdotdot({
