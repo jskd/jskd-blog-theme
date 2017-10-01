@@ -8,7 +8,7 @@
 		  </span>
 		  <h2>Abonnement à la newsletter</h2>
     </header>
-    <div class="w3-container">
+    <div class="w3-container w3-margin-top">
     <?php
       echo do_shortcode('[jetpack_subscription_form
         title=""
