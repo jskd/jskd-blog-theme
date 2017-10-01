@@ -8,24 +8,9 @@
 		  </span>
 		  <h2>Abonnement à la newsletter</h2>
     </header>
-    <div class="w3-container w3-margin-top">
-      Restez informés en vous inscrivant à la newsletter.
-    </div>
     <?php
-      $form= new MailpoetFormCustom();
-      $form->addClassSubmitButton('w3-button w3-green w3-margin-right');
-      $form->addClassSubmitParagraph('w3-container w3-border-top w3-padding-16 w3-light-grey');
-      $form->moveButtonBottom();
-      $form->addButton('Fermer',  array(
-        'class'=> 'w3-button w3-red',
-        'type' => 'button',
-        'onclick' => 'close_newsletter_modal()',
-        'id' => 'newsletter-modal-close'
-      ));
-      $form->addClassTextInput('w3-input w3-hover-theme w3-theme-l4 w3-border-0');
-      $form->addClassTextParagraph('w3-container w3-margin-top');
-      $form->addClassMessageDiv('w3-container w3-margin-top');
-      echo $form;
+echo do_shortcode('
+[jetpack_subscription_form title="" subscribe_text="Restez informés en vous inscrivant à la newsletter." subscribe_button="Sign Me Up" show_subscribers_total="0"]');
     ?>
 	</div>
 </div>
