@@ -8,9 +8,15 @@
 		  </span>
 		  <h2>Abonnement à la newsletter</h2>
     </header>
+    <div class="w3-container">
     <?php
-echo do_shortcode('
-[jetpack_subscription_form title="" subscribe_text="Restez informés en vous inscrivant à la newsletter." subscribe_button="Sign Me Up" show_subscribers_total="0"]');
+      echo do_shortcode('[jetpack_subscription_form
+        title=""
+        subscribe_text="Restez informés en vous inscrivant à la newsletter."
+        subscribe_button="S\'abonner"
+        show_subscribers_total="0"]
+      ');
     ?>
+    </div>
 	</div>
 </div>
