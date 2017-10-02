@@ -10,11 +10,8 @@ Tags: blog bootstrap
 
 <?php get_header(); ?>
 
-	<div class="row">
+		<main class="w3-col m7 l8">
 
-		<div class="col-md-8 w3-padding-16">
-
-(index)
 <?php
 // set the "paged" parameter (use 'page' if the query is on a static front page)
 if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
@@ -87,10 +84,8 @@ echo $paginate;
 </div>
 </div>
 
-		</div> <!-- col -->
+		</main> <!-- col -->
 
 		<?php get_sidebar(); ?>
-
-	</div> <!-- row -->
 
 <?php get_footer(); ?>

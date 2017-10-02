@@ -24,6 +24,12 @@ body.admin-bar .anchor {
     margin-top: -71px;
 }
 
+.row-max-width {
+  max-width: 1140px;
+  margin: auto;
+}
+
+
 .header-container {
   height: 480px;
   overflow: hidden;

@@ -1,14 +1,11 @@
       </div> <!-- /.container -->
     </main>
 
-    <footer class="container-fluid  w3-theme-d4 w3-medium hidden-print">
-      <div class="row">
-        <div class="col-12">
-          <div class="container footer-container" >
-            <div class="row no-gutters">
-             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-               <h3>Navigation</h3>
-               <ul class="list-style-none padding-0">
+    <footer class="w3-row  w3-theme-d4 w3-medium hidden-print">
+      <div class="w3-row row-max-width">
+        <div class="w3-col s6 m4 l2">
+          <h3>Navigation</h3>
+            <ul class="list-style-none padding-0">
 <?php
 wp_nav_menu( array(
   'theme_location' => 'menu-footer',
@@ -22,7 +19,7 @@ wp_nav_menu( array(
 )); ?>
                 </ul>
               </div>
-             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+             <div class="w3-col s6 m4 l2">
                <h3>Suivez-moi</h3>
                <ul class="list-style-none padding-0">
 <?php
@@ -42,19 +39,28 @@ wp_nav_menu( array(
           </div>
         </div>
       </div>
-      <div class="row w3-theme-d5">
-        <div class="container">
-          <div class="col-12 padding-0 w3-margin-top w3-margin-bottom">
-            <div class="w3-cell-row">
-              <div class="w3-container w3-cell w3-cell-middle w3-small padding-0 w3-right-align">
+      <div class="w3-row w3-theme-d5">
+      <div class="w3-row-padding row-max-width">
+
+<div class="w3-cell-row w3-small w3-margin-top w3-margin-bottom">
+  <div class="w3-cell w3-right-align w3-cell-middle">
+
                 Ce site est mis à disposition selon les termes de la
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International</a><br>
                 Copyright © 2017 <a class="decoration-none w3-hover-theme" href="<?php get_home_url(); ?>">jeromeskoda.fr</a>
-              </div>
-              <div class="w3-container w3-cell w3-cell-middle w3-small padding-0 w3-center">
+
+
+  </div>
+
+  <div class="w3-cell w3-cell-middle">
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
                   <img alt="Licence Creative Commons" style="border-width:0; margin: auto 0 auto 10px;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
                 </a>
+</div>
+
+
+</div>
+
               </div>
             </div>
           </div>
@@ -62,7 +68,6 @@ wp_nav_menu( array(
       </div>
     </footer>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/jquery-3.2.1.min.js" type="text/javascript"> </script>
-    <script src="<?php echo get_theme_file_uri() ?>/assets/css/bootstrap-4.0.0-alpha6-dist/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/plax/js/plax.js" type="text/javascript"></script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/dotdotdot/src/jquery.dotdotdot.js" type="text/javascript"></script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/cubesat-plax.js" type="text/javascript"></script>

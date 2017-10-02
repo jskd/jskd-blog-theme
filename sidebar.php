@@ -1,4 +1,4 @@
-<aside class="col-md-4 col-md-offset-8 hidden-print w3-padding-16">
+<aside class="w3-col m5 l4">
   <div class="w3-card-4">
     <?php get_template_part( 'template-parts/sidebar-article' ); ?>
   </div>

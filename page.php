@@ -9,9 +9,8 @@ Tags: blog bootstrap
 ?>
 
 <?php get_header(); ?>
+		<main class="w3-col m7 l8">
 
-<div class="row">
-  <main class="col-md-8 w3-padding-16">
     <div class="w3-small">
       <a href="<?php echo get_home_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a>
       <?php foreach($post->ancestors as $ancestor) { ?>
@@ -40,5 +39,4 @@ Tags: blog bootstrap
 
 		</main>
 		<?php get_sidebar(); ?>
-	</div> <!-- /.row -->
 <?php get_footer(); ?>

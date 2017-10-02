@@ -13,7 +13,7 @@ class WalkerMenuTop extends Walker {
      * Note: Menu objects include url and title properties, so we will use those.
      */
   function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-    $output .= sprintf( '<div class="col-sm-2">
+    $output .= sprintf( '<div class="w3-col" style="width: 22%%">
         <a href="%s" class="w3-button w3-block w3-padding decoration-none">%s</a>
       </div>',
       $item->url,
