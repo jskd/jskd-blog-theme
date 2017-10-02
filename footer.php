@@ -2,7 +2,7 @@
     </main>
 
     <footer class="w3-row  w3-theme-d4 w3-medium hidden-print">
-      <div class="w3-row row-max-width">
+      <div class="w3-row-padding row-max-width">
         <div class="w3-col s6 m4 l2">
           <h3>Navigation</h3>
             <ul class="list-style-none padding-0">
