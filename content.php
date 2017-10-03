@@ -11,6 +11,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+
+
 		<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -18,9 +21,16 @@
 				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 endif;
 
+
+
 		?>
+
+
 	<div class="entry-content">
-		<?php echo apply_filters('the_content', get_the_content()); ?>
+
+		<?php the_content();  ?>
+
+<?php if ( function_exists( 'sharing_display' ) ) { echo sharing_display(); } ?>
   </div>
   <div class="navigation-link">
     <?php	wp_link_pages( array(
