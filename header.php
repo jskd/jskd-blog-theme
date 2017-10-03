@@ -52,23 +52,23 @@
         ));
 ?>
         <div class="w3-rest">
-          <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
+          <a href="#" class="w3-button w3-block w3-padding" onclick="search_toggle()">
             <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
+          </a>
         </div>
       </div>
 
         <!-- Extra small nav -->
         <div class="w3-row row-max-width w3-hide-medium w3-hide-large">
           <div class="w3-col s8">
-            <button class="w3-button w3-block w3-padding" onclick="menu_open()">
+            <a href="#" class="w3-button w3-block w3-padding" onclick="menu_open()">
            <i class="fa fa-bars" aria-hidden="true"></i> Menu
-           </button>
+           </a>
         </div>
         <div class="w3-col s4">
-          <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
+          <a href="#" class="w3-button w3-block w3-padding" onclick="search_toggle()">
             <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
+          </a>
         </div>
       </div>
       <!-- Search bar -->
