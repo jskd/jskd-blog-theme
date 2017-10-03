@@ -6,18 +6,15 @@ Template Name: Search Page
 
 <?php get_header(); ?>
 
-	<div class="row">
+<main class="w3-col m7 l8">
 
-		<main class="col-md-8 w3-padding-16">
+  <h2>Recherche</h2>
+  <p>
+    <?php get_search_form(); ?>
+  </p>
 
-
-<h2>Recherche</h2>
-<p>
-<?php get_search_form(); ?>
-<?php /* Start the Loop */ ?>
-</p>
-<p>
-			<?php // The Query
+  <p>
+	<?php // The Query
 global $query_string;
 
 $query_args = explode("&", $query_string);
@@ -46,26 +43,19 @@ if ( $the_query->have_posts() ) {
 <li>
 <a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 </li>
+      <?php } ?>
+    </ul>
 <?php
+	  /* Restore original Post Data */
+	  wp_reset_postdata();
+  } else {
+	  echo "Aucun résultat";
   }
 ?>
-</ul>
-<?php
+  </p>
 
+</main>
 
-
-
-	/* Restore original Post Data */
-	wp_reset_postdata();
-} else {
-	echo "Aucun résultat";
-}
- ?>
-</p>
-		</main>
-
-		<?php get_sidebar(); ?>
-
-	</div> <!-- /.row -->
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

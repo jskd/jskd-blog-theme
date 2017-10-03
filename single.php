@@ -8,11 +8,9 @@ Tags: blog bootstrap
 */
 ?>
 
+
 <?php get_header(); ?>
-
-	<div class="row">
-
-		<div class="col-md-8 w3-padding-16">
+		<main class="w3-col m7 l8">
 
 
 		<?php
@@ -50,10 +48,8 @@ echo($paginate);
 		endwhile;
 ?>
 
-		</div> <!-- /.blog-main -->
+		</main> <!-- col -->
 
 		<?php get_sidebar(); ?>
-
-	</div> <!-- /.row -->
 
 <?php get_footer(); ?>
