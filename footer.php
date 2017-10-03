@@ -50,7 +50,7 @@ wp_nav_menu( array(
             </div>
             <div class="w3-cell w3-cell-middle">
               <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-                <img alt="Licence Creative Commons" style="border-width:0; margin: auto 0 auto 10px;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+                <img alt="Licence Creative Commons" class="w3-margin-left w3-border-0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
               </a>
             </div>
           </div>
