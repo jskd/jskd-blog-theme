@@ -38,7 +38,7 @@
 
     <!-- Menu top -->
     <nav id="menu-top" class="w3-theme-d3 w3-row w3-top hidden-print padding-0">
-      <div class="w3-row row-max-width w3-hide-small">
+      <div class="w3-row-padding row-max-width w3-hide-small">
 <?php
         wp_nav_menu( array(
           'theme_location' => 'menu-top',
