@@ -1,11 +1,13 @@
       </div> <!-- /.container -->
-    </main>
+    </div>
 
     <footer class="w3-row  w3-theme-d4 w3-medium hidden-print">
+
+      <!-- Footer navigation -->
       <div class="w3-row-padding row-max-width">
         <div class="w3-col s6 m4 l2">
           <h3>Navigation</h3>
-            <ul class="list-style-none padding-0">
+          <ul class="list-style-none padding-0">
 <?php
 wp_nav_menu( array(
   'theme_location' => 'menu-footer',
@@ -17,11 +19,11 @@ wp_nav_menu( array(
   'after' => '',
   'walker'  => new  WalkerMenuFooter()
 )); ?>
-                </ul>
-              </div>
-             <div class="w3-col s6 m4 l2">
-               <h3>Suivez-moi</h3>
-               <ul class="list-style-none padding-0">
+          </ul>
+        </div>
+        <div class="w3-col s6 m4 l2">
+          <h3>Suivez-moi</h3>
+          <ul class="list-style-none padding-0">
 <?php
 wp_nav_menu( array(
   'theme_location' => 'menu-social-list',
@@ -33,35 +35,23 @@ wp_nav_menu( array(
   'after' => '',
   'walker'  => new  WalkerMenuSocialList()
 )); ?>
-                </ul>
-              </div>
-            </div>
-          </div>
+          </ul>
         </div>
       </div>
+
+      <!-- Licence -->
       <div class="w3-row w3-theme-d5">
-      <div class="w3-row-padding row-max-width">
-
-<div class="w3-cell-row w3-small w3-margin-top w3-margin-bottom">
-  <div class="w3-cell w3-right-align w3-cell-middle">
-
-                Ce site est mis à disposition selon les termes de la
-                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International</a><br>
-                Copyright © 2017 <a class="decoration-none w3-hover-theme" href="<?php get_home_url(); ?>">jeromeskoda.fr</a>
-
-
-  </div>
-
-  <div class="w3-cell w3-cell-middle">
-                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <img alt="Licence Creative Commons" style="border-width:0; margin: auto 0 auto 10px;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
-                </a>
-</div>
-
-
-</div>
-
-              </div>
+        <div class="w3-row-padding row-max-width">
+          <div class="w3-cell-row w3-small w3-margin-top w3-margin-bottom">
+            <div class="w3-cell w3-right-align w3-cell-middle">
+              Ce site est mis à disposition selon les termes de la
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International</a><br>
+              Copyright © 2017 <a class="decoration-none w3-hover-theme" href="<?php get_home_url(); ?>">jeromeskoda.fr</a>
+            </div>
+            <div class="w3-cell w3-cell-middle">
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                <img alt="Licence Creative Commons" style="border-width:0; margin: auto 0 auto 10px;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <title><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archive <?php } ?> <?php wp_title(); ?></title>
     <meta charset="UTF-8">
@@ -51,30 +51,26 @@
           'walker'  => new WalkerMenuTop()
         ));
 ?>
-            <div class="w3-rest">
-              <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
-    </div>
+        <div class="w3-rest">
+          <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
 
-
-          <!-- Extra small nav -->
-          <div class="w3-row row-max-width w3-hide-medium w3-hide-large">
-            <div class="w3-col s8">
-              <button class="w3-button w3-block w3-padding" onclick="menu_open()">
-                <i class="fa fa-bars" aria-hidden="true"></i> Menu
-              </button>
-            </div>
-            <div class="w3-col s4">
-              <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
-      </div> <!-- Row -->
-
+        <!-- Extra small nav -->
+        <div class="w3-row row-max-width w3-hide-medium w3-hide-large">
+          <div class="w3-col s8">
+            <button class="w3-button w3-block w3-padding" onclick="menu_open()">
+           <i class="fa fa-bars" aria-hidden="true"></i> Menu
+           </button>
+        </div>
+        <div class="w3-col s4">
+          <button class="w3-button w3-block w3-padding" onclick="search_toggle()">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
       <!-- Search bar -->
       <div id="search-bar" class="w3-row w3-theme-l1">
           <div class="w3-row row-max-width">
@@ -83,7 +79,7 @@
             </div>
           </div>
         </div>
-      </div>
+
     </nav>
 
     <header id="web-banner" class="w3-row w3-theme-d4 hidden-print padding-0">
@@ -100,7 +96,7 @@
         <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-8.png" alt="cubesat 8">
         <img class="cubesat" src="<?php echo get_theme_file_uri() ?>/assets/images/cubesat/cubesat-9.png" alt="cubesat 9">
       </div>
-      <div class="w3-row row-max-width header-container">
+      <div class="w3-row-padding row-max-width header-container">
         <div class="w3-display-container" style="height: 100%">
           <div class="w3-display-middle" style="width: 100%;">
             <span class="w3-xxlarge">Jérôme Skoda</span><br>
@@ -108,16 +104,16 @@
           </div>
           <div class="w3-display-bottommiddle w3-left w3-right-align w3-xxlarge" style="width: 100%">
 <?php 
-wp_nav_menu( array(
-  'theme_location' => 'menu-social-icon',
-  'container'       => '',
-  'link_before' => '',
-  'link_after' => '',
-  'before' => '',
-  'after' => '',
-'menu_class' => 'menu-social-icon',
-  'walker'  => new  WalkerMenuSocialIcon()
-)); ?>
+        wp_nav_menu( array(
+          'theme_location' => 'menu-social-icon',
+          'container'       => '',
+          'link_before' => '',
+          'link_after' => '',
+          'before' => '',
+          'after' => '',
+          'menu_class' => 'menu-social-icon',
+          'walker'  => new  WalkerMenuSocialIcon()
+        )); ?>
           </div>
         </div>
       </div>
@@ -125,5 +121,5 @@ wp_nav_menu( array(
 
     <?php get_template_part( 'template-parts/newsletter-modal' ); ?>
 
-    <main class="w3-row w3-theme-l5 padding-0 w3-padding-16" >
+    <div class="w3-row w3-theme-l5 padding-0 w3-padding-16" >
       <div class="w3-row-padding row-max-width"> 
