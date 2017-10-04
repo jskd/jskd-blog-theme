@@ -25,13 +25,14 @@ endif;
 
 		?>
 
-
 	<div class="entry-content">
-
 		<?php the_content();  ?>
-
-<?php if ( function_exists( 'sharing_display' ) ) { echo sharing_display(); } ?>
   </div>
+
+  <div class="sharing-display hidden-print">
+    <?php if(function_exists('sharing_display')) echo sharing_display(); ?>
+  </div>
+
   <div class="navigation-link hidden-print">
     <?php	wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
