@@ -1,10 +1,11 @@
 @media only print
 {
-
   body > *, .hidden-print {
     display: none !important;
   }
-
+  .visible-print {
+    display: initial !important;
+  }
   .main-div, main {
     display: block !important;
     width: 100% !important;
@@ -14,5 +15,4 @@
     float: none !important;
     background-color: #FFF !important;
   }
-
 }

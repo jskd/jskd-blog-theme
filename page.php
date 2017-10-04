@@ -12,7 +12,8 @@ Tags: blog bootstrap
 
 <main class="w3-col m7 l8">
 
-  <div class="w3-small">
+  <!-- Parent Nav -->
+  <div class="w3-small hidden-print">
     <a href="<?php echo get_home_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a>
     <?php foreach($post->ancestors as $ancestor) { ?>
       <i class="fa fa-caret-right" aria-hidden="true"></i>

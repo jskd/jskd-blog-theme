@@ -1,10 +1,10 @@
       </div> <!-- /.container -->
     </div>
 
-    <footer class="w3-row  w3-theme-d4 w3-medium hidden-print">
+    <footer class="w3-row w3-theme-d4 w3-medium visible-print">
 
       <!-- Footer navigation -->
-      <div class="w3-row-padding row-max-width">
+      <div class="w3-row-padding row-max-width hidden-print">
         <div class="w3-col s6 m4 l2">
           <h3>Navigation</h3>
           <ul class="list-style-none padding-0">
@@ -40,7 +40,7 @@ wp_nav_menu( array(
       </div>
 
       <!-- Licence -->
-      <div class="w3-row w3-theme-d5">
+      <div class="w3-row w3-theme-d5 hidden-print">
         <div class="w3-row-padding row-max-width">
           <div class="w3-cell-row w3-small w3-margin-top w3-margin-bottom">
             <div class="w3-cell w3-right-align w3-cell-middle">
@@ -56,7 +56,17 @@ wp_nav_menu( array(
           </div>
         </div>
       </div>
+
+      <!-- Licence print -->
+      <div class="w3-tiny w3-hide visible-print">
+        <i class="fa fa-link" aria-hidden="true"></i> <?php echo home_url(add_query_arg(array(),$wp->request)); ?><br>
+        <img alt="Licence Creative Commons" class="w3-border-0" style="vertical-align:text-top;" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+        Ce site est mis à disposition selon les termes de la Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International
+         - Copyright © 2017 jeromeskoda.fr
+      </div>
+
     </footer>
+
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/jquery-3.2.1.min.js" type="text/javascript"> </script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/plax/js/plax.js" type="text/javascript"></script>
     <script src="<?php echo get_theme_file_uri() ?>/assets/js/dotdotdot/src/jquery.dotdotdot.js" type="text/javascript"></script>
