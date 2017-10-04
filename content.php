@@ -32,7 +32,7 @@ endif;
 
 <?php if ( function_exists( 'sharing_display' ) ) { echo sharing_display(); } ?>
   </div>
-  <div class="navigation-link">
+  <div class="navigation-link hidden-print">
     <?php	wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
 				'after'       => '</div>',

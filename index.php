@@ -73,7 +73,7 @@ $args = array(
 	'before_page_number' => '',
 	'after_page_number'  => ''
 ); ?>
-<div class="w3-center">
+<div class="w3-center hidden-print">
 <div class="w3-bar w3-border w3-round">
 <?php 
 $paginate= paginate_links( $args );

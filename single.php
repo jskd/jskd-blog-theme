@@ -42,8 +42,9 @@ $paginate = preg_replace("/<h2[^<]*<\/h2\>/i", "", $paginate);
 $paginate = str_replace('rel="prev"', 'class="w3-btn w3-border w3-ripple w3-hover-theme" rel="prev"', $paginate); 
 $paginate = str_replace('rel="next"', 'class="w3-btn w3-border w3-ripple w3-hover-theme w3-right" rel="next"', $paginate); 
 
+echo '<span class="hidden-print">';
 echo($paginate);
-
+echo '</span>';
 		// End the loop.
 		endwhile;
 ?>

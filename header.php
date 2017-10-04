@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head();?>
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/print.css" type="text/css">
   </head>
   <body class="<?php echo join(' ', get_body_class()); ?> w3-theme-d5">
     <!-- Overlay -->
@@ -121,5 +122,5 @@
 
     <?php get_template_part( 'template-parts/newsletter-modal' ); ?>
 
-    <div class="w3-row w3-theme-l5 padding-0 w3-padding-16" >
-      <div class="w3-row-padding row-max-width"> 
+    <div class="w3-row w3-theme-l5 padding-0 w3-padding-16 main-div" >
+      <div class="w3-row-padding row-max-width main-div"> 
