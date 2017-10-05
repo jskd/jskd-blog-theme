@@ -49,20 +49,20 @@ add_action('wp_print_scripts', 'theme_queue_js');
 
 
 function pdesc( $atts, $content = null ) {
-	return '<div class="container padding-0 w3-margin-bottom">
+	return '<div class="w3-row padding-0 w3-margin-bottom">
   <div class="row  align-items-center">' . do_shortcode($content) . '</div></div>';
 }
 add_shortcode( 'pdesc-container', 'pdesc' );
 
 
 function pdesc_brief( $atts, $content = null ) {
-	return '<div class="col-sm-8">' . do_shortcode($content) . '</div>';
+	return '<div class="w3-col m8">' . do_shortcode($content) . '</div>';
 }
 add_shortcode( 'pdesc-brief', 'pdesc_brief' );
 
 
 function pdesc_link( $atts, $content = null ) {
-	return '<div class="col-sm-4">' . do_shortcode($content) . '</div>';
+	return '<div class="w3-col m4">' . do_shortcode($content) . '</div>';
 }
 add_shortcode( 'pdesc-link', 'pdesc_link' );
 
@@ -75,55 +75,6 @@ function pdesc_button( $atts, $content = null ) {
     ' . do_shortcode($content) . '</a>';
 }
 add_shortcode( 'pdesc-button', 'pdesc_button' );
-
-
-
-function pslide( $atts, $content = null ) {
-  return '<div class="w3-content w3-display-container">' . do_shortcode($content) . '
- <div class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</div>
-</div>
-
-<script>var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-}</script>';
-}
-add_shortcode( 'pslide', 'pslide' );
-
-
-
-function pslide_img( $atts, $content = null ) {
-  $a = shortcode_atts( array(
-		'src' => '',
-	), $atts );
-	return '<div class="w3-display-container mySlides">
-  <img src="' . esc_attr($a['src']) . '" style="width:100%">
-  <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
-  ' . do_shortcode($content) . '
-  </div>
-</div>';
-}
-
-
-
-add_shortcode( 'pslide-img', 'pslide_img' );
-
-
-
 
 add_filter( 'comment_form_default_fields', 'w3css_comment_form_fields' );
 function w3css_comment_form_fields( $fields ) {
