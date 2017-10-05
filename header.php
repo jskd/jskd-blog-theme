@@ -101,7 +101,7 @@
         <div class="w3-display-container" style="height: 100%">
           <div class="w3-display-middle" style="width: 100%;">
             <span class="w3-xxlarge">Jérôme Skoda</span><br>
-            <span class="w3-xlarge">Passionné d'informatique et de nanosatellite</span>
+            <span class="w3-xlarge">Passionné d'informatique et de cubesat</span>
           </div>
           <div class="w3-display-bottommiddle w3-left w3-right-align w3-xxlarge" style="width: 100%">
 <?php 
