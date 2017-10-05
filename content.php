@@ -30,7 +30,12 @@ endif;
   </div>
 
   <div class="sharing-display hidden-print">
-    <?php if(function_exists('sharing_display')) echo sharing_display(); ?>
+    <?php if(function_exists('sharing_display')) echo sharing_display( '', true);
+/*if ( class_exists( 'Jetpack_Likes' ) ) {
+    $custom_likes = new Jetpack_Likes;
+    echo $custom_likes->post_likes( '' );
+    } */
+?>
   </div>
 
   <div class="navigation-link hidden-print">

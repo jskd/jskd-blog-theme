@@ -15,4 +15,8 @@
     float: none !important;
     background-color: #FFF !important;
   }
+
+  .tiled-gallery {
+    display: none !important;
+  }
 }
