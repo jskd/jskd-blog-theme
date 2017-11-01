@@ -37,6 +37,22 @@ wp_nav_menu( array(
 )); ?>
           </ul>
         </div>
+        <div class="w3-col s6 m4 l2">
+          <h3>Administration</h3>
+          <ul class="list-style-none padding-0">
+<?php
+wp_nav_menu( array(
+  'theme_location' => 'menu-administration',
+  'container'       => '',
+  'items_wrap'      => '%3$s',
+  'link_before' => '',
+  'link_after' => '',
+  'before' => '',
+  'after' => '',
+  'walker'  => new  WalkerMenuFooter()
+)); ?>
+          </ul>
+        </div>
       </div>
 
       <!-- Licence -->

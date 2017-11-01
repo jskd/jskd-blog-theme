@@ -13,11 +13,12 @@ remove_filter('the_content', 'wpautop');
 function register_my_menus() {
   register_nav_menus(
     array(
-    'menu-sidebar'     => __( 'Menu sidebar',      'jskd-blog-theme' ),
-    'menu-top'         => __( 'Menu top',           'jskd-blog-theme' ),
-    'menu-footer'         => __( 'Menu top',           'jskd-blog-theme' ),
-		'menu-social-icon' => __( 'Social Links Menu',  'jskd-blog-theme' ),
-		'menu-social-list' => __( 'Social Links Menu',  'jskd-blog-theme' ),
+    'menu-sidebar'        => __( 'Menu sidebar',      'jskd-blog-theme' ),
+    'menu-top'            => __( 'Menu top',           'jskd-blog-theme' ),
+    'menu-footer'         => __( 'Menu top',           'jskd-blog-theme' ), 
+    'menu-administration' => __( 'Administration (footer)',           'jskd-blog-theme' ),
+		'menu-social-icon'    => __( 'Social Links Menu',  'jskd-blog-theme' ),
+		'menu-social-list'    => __( 'Social Links Menu',  'jskd-blog-theme' ),
     )
   );
 }
